@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface Bonita</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        /* Menu lateral */
+        .sidebar {
+            width: 220px;
+            background-color: #4B79A1;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Conteúdo principal */
+        .main-content {
+            flex: 1;
+            padding: 40px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        header .profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        header .profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        /* Card */
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            max-width: 600px;
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            color: #4B79A1;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        /* Botão estiloso */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4B79A1;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #3a5f7a;
+        }
+
+        /* Responsivo */
+        @media(max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                flex-direction: row;
+                overflow-x: auto;
+            }
+
+            .sidebar a {
+                margin-right: 10px;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <a href="#">Dashboard</a>
+        <a href="#">Perfil</a>
+        <a href="#">Configurações</a>
+        <a href="#">Sair</a>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Bem-vindo!</h1>
+            <div class="profile">
+                <img src="https://i.pravatar.cc/40" alt="Perfil">
+                <span>Zenilton</span>
+            </div>
+        </header>
+
+        <div class="card">
+            <h2>Meu Card Bonito</h2>
+            <p>
+                Este é um exemplo de interface simples e moderna usando apenas HTML e CSS. 
+                É responsiva, possui um menu lateral, cabeçalho com perfil e um card central com sombra suave.
+            </p>
+            <a href="#" class="btn">Clique Aqui</a>
+        </div>
+    </div>
+</body>
+</html>
